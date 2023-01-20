@@ -1,0 +1,123 @@
+.footer__inner {
+    display: flex;
+    transform: translateY(600px);
+    background-color: #F3F4F6;
+    padding-top: 33px;
+    padding-left: 110px;
+    padding-bottom: 116px;
+
+    @media (max-width:$tablet) {
+        margin-left: -100px;
+    }
+}
+
+.footer__logo {
+
+    img {
+        vertical-align: middle;
+        margin-right: -8px;
+    }
+
+    @media (max-width:$tablet) {
+        display: block;
+        transform: translateX(250px);
+    }
+}
+
+
+nav {
+    text-align: center;
+    transform: translateX(200px);
+    padding-left: 70px;
+     @media (max-width:$desktop) {
+        flex-direction: column;
+    }
+    
+
+    h3 {
+        font-family: $font-family-primary;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        color: $primary-color;
+        margin: 0;
+        margin-bottom: 5px
+    }
+}
+
+.footer__list {
+   @include reset-list;
+   
+   
+
+   li {
+
+    a {
+        font-family: $font-family-primary;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        color: $secondary-color;
+
+        &:hover {
+            border-bottom: 1px solid;
+        }
+    }
+   }
+}
+
+.footer__content {
+    transform: translate(-200px,140px);
+    @media (max-width:$desktop) {
+        transform: translate(-120px,400px);
+        text-align: center;
+    }
+
+    @media (max-width:$tablet) {
+        padding-top: 40px;
+    }
+
+    p {
+        text-align: center;
+        font-family: $font-family-primary;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        color: $secondary-color;
+        max-width: 150px;
+
+        
+    }
+}
+
+.nav__wrapper {
+    display: contents;
+
+    @media (max-width:$desktop) {
+        flex-direction: column;
+    }
+
+   
+}
+
+.nav__wrapper {
+    @media (max-width:$desktop) {
+        flex-direction: column;
+        display: block;
+        transform: translateX(-150px);
+    }
+}
+
+.nav__inner {
+
+    @media(max-width:$desktop) {
+        margin-bottom: 50px;
+    }
+
+    @media (max-width:$tablet) {
+
+        &:first-child {
+            padding-top: 50px;
+        }
+    }
+}

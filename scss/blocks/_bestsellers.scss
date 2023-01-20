@@ -1,0 +1,206 @@
+.bestsellers__inner {
+    display: flex;
+    transform: translateY(350px);
+
+    @media (max-width:$desktop) {
+        display: block;
+    }
+}
+
+.bestsellers__content {
+    background-image: url(/img/bestsellers-bg-img.png);
+    background-repeat: no-repeat;
+    width: 430px;
+    height: 600px;
+    
+    @media (max-width:$desktop) {
+        margin-left: 200px;
+        background-position: center;
+    }
+
+    @media (max-width:$tablet) {
+        margin-left: 120px;
+    }
+
+    
+
+    h2 {
+        position: absolute;
+        font-family: $font-family-primary;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 50px;
+        color: $primary-color;
+        margin: 0;
+        margin-bottom: 20px;
+        top: 200px;
+
+        @media (max-width:$tablet) {
+            font-size: 36px;
+            margin-left: 70px;
+            margin-top: -100px;
+        }
+    }
+
+    a {
+        position: absolute;
+        top: 270px;
+
+        @media (max-width:$tablet) {
+            margin-left: 25px;
+            margin-top: -120px;
+        }
+    }
+}
+
+.bestsellers__card-img {
+    display: flex;
+    margin-left: 30px;
+
+    @media (max-width: $desktop) {
+        margin-bottom: 300px;
+        margin-left: 50px;
+    }
+
+    @media (max-width:$tablet) {
+        transform: translateY(-400px);
+    }
+}
+
+.card-img__content {
+    display: flex;
+    align-items: center;
+   
+
+    h4 {
+        margin: 0;
+        font-family: $font-family-secondary;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        color: #1F2937;
+
+        @media (max-width:$tablet) {
+            font-size: 15px;
+        }
+    }   
+
+    span {
+        display: flex;
+        font-family: $font-family-secondary;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        background-color: $primary-color;
+        width: 32px;
+        height: 18px;
+        border-radius: 8px;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        margin-left: 8px;
+    }
+}
+
+.card__content {
+    display: flex;
+    align-items: center;
+
+    p {
+        font-family: $font-family-secondary;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        max-width: 240px;
+        color: #6B7280;
+        line-height: 140%;
+        margin: 0;
+        max-width: 245px;
+
+        @media (max-width:$tablet) {
+            max-width: 200px;
+            font-size: 10px;
+        }
+    }
+
+    button {
+        border: none;
+        background-color: transparent;
+        vertical-align: middle;
+        padding-bottom: 10px;
+        margin-left: 50px;
+
+        @media (max-width:$tablet) {
+            margin-left: 20px;
+        }
+    }
+}
+
+.content-wrapper {
+   position: relative;
+   background: rgba(255, 255, 255, 0.75);
+   backdrop-filter: blur(25px);
+   border-radius: 0px 20px;
+   top: 270px;
+   padding: 13px 10px;
+   transform: translateX(100px);
+
+   @media (max-width:$tablet) {
+        transform: translate(100px,-70px);        
+   }
+}
+
+.card-img {
+    position: absolute;
+    transform: translateX(100px);
+
+    img {
+        @media (max-width:$tablet) {
+            width: 300px;
+            height: 300px;
+        }
+    }
+}
+
+.bestsellers__card-img {
+    transform: translateY(50px);
+}
+
+.bestsellers__buttons {
+    transform: translate(-300px,500px);
+
+    @media (max-width:$desktop) {
+        transform: translate(300px,50px);
+    }
+
+    @media (max-width:$tablet) {
+        margin-left: -30px;
+        margin-top: -30px;
+    }
+
+    ul {
+        @include reset-list;
+        display: flex;
+
+        li {
+
+            button {
+                border: none;
+                background-color: transparent;
+                width: 8px;
+                height: 8px;
+                background-color: $secondary-color;
+                border-radius: 50%;
+                margin-left: 6px;
+
+                &:active {
+                    background-color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+.trends-bg {
+    background-image: url(/img/trends-bg.png);
+}

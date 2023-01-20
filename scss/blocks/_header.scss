@@ -1,0 +1,169 @@
+.header {
+    width: 100%;
+    background-color: white;
+    z-index: 100;
+    top: 0;
+    padding: 30px 0;
+
+    @media (min-width:$tablet) {
+        position: fixed;
+    }
+}
+
+h1 {
+    margin: 0;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+
+    @media(max-width: $desktop) {
+        width: 100%;
+        white-space: nowrap;
+    }
+}
+
+.header__logo {
+    display: flex;
+    position: absolute;
+}
+
+.hidden {
+
+    .header-logo {
+        vertical-align: middle;
+        margin-right: -10px;
+    }
+}
+
+.header__nav {
+    
+
+    ul {
+        @include reset-list;
+        display: flex;
+        gap: 30px;
+        margin-left: 300px;
+        margin-top: 5px;
+        
+        @media (max-width:$desktop) {
+            margin-left: 0;
+        }
+
+        li {
+
+            a {
+                font-family: $font-family-secondary;
+                text-decoration: none;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 12px;
+                color: #1F2937;
+
+                &:hover {
+                    border-bottom: 1px solid;
+                }
+
+                &:focus {
+                    outline: 2px dashed;
+                    outline-offset: 5px;
+                    border-radius: 5px;
+                }
+
+                &:active {
+                    color: red;
+                }
+
+                @media (max-width:$tablet) {
+                    padding-left: 20px;
+                }
+            }
+        }
+    }
+}
+
+.header__icons {
+    margin-left: auto;
+    @media (max-width:$tablet){
+        display: none;
+    }
+
+    a {
+        text-decoration: none;
+
+        &:first-child {
+            margin-right: 10px;
+        }
+    }
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.main-header__hamburger {
+    &::before,&::after {
+        display: block;
+        content: "";
+        width: 20px;
+        height: 2px;
+        background-color: black;
+        margin: 5px 0;
+        margin-left: 450px;
+        transition: 0.3s ease;
+
+        @media (min-width: $tablet) {
+            display: none;
+        }
+
+    }
+
+    @media (max-width:$tablet) {
+        input:checked + & + .nav-wrapper {
+            transform: translateX(0);
+        }
+
+        input:checked + & {
+            &::before {
+                transform: translateY(5px) rotate(45deg);
+            }
+
+            &::after {
+                transform:translateY(-3px) rotate(-45deg);
+            }
+        }
+    }
+}
+
+.nav-wrapper {
+    ul {
+        @media (max-width:$tablet) {
+            flex-direction: column;
+            margin-top: -20px;
+            text-align: left;
+            margin-left: -28px;
+        }
+    }
+
+    @media (max-width:$tablet) {
+        position: fixed;
+        top: 0;
+        left: -270px;
+        height: 100vh;
+        background-color: white;
+        padding: 30px;
+        width: 90%;
+        transform: translateX(-100%);
+        transition: 0.3s ease;
+    }   
+}

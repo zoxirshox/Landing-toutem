@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    @media (max-width: $desktop-l) {
+		max-width: $desktop;
+	}
+
+    @media (max-width: $desktop) {
+        max-width: $tablet;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'San Francisco Pro Display Regular';
+    src: url('SFProDisplay-Regular.eot');
+    src: url('SFProDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+    url('SFProDisplay-Regular.woff') format('woff'),
+    url('SFProDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'San Francisco Pro Display Medium';
+    src: url('SFProDisplay-Medium.eot');
+    src: url('SFProDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+    url('SFProDisplay-Medium.woff') format('woff'),
+    url('SFProDisplay-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
